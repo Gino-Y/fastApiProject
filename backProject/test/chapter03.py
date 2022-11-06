@@ -141,6 +141,7 @@ class Data(BaseModel):
     recovered: int = Field(ge=0, description='痊愈数', default=0)
 
 
+# 请求体json------------------------------>
 @app03.put('/request_body/nested')
 async def nested_models(data: Data):
     return data
