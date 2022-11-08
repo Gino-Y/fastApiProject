@@ -1,12 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-from test import app03
-from test import app04
-from test import app05
-from test import app06
-from test import app07
-from test import app08
+from test import app03, app04, app05, app06, app07, app08
 
 app = FastAPI()
 
@@ -15,7 +10,7 @@ app.include_router(app04, prefix='/chapter04', tags=['第四章 响应处理和F
 app.include_router(app05, prefix='/chapter05', tags=['第五章 FastAPI的依赖注入系统'])
 app.include_router(app06, prefix='/chapter06', tags=['第六章 请求参数和验证'])
 app.include_router(app07, prefix='/chapter07', tags=['第七章 请求参数和验证'])
-app.include_router(app08, prefix='/chapter08', tags=['第八章 请求参数和验证'])
+app.include_router(app08, prefix='/chapter08', tags=['第八章 临时练习'])
 
 @app.get("/")
 async def root():
