@@ -3,7 +3,7 @@
 """
 from typing import Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel, EmailStr
 
 app04 = APIRouter()
@@ -38,3 +38,5 @@ users = {
 @app04.post('/response_model', response_model=UserOut, response_model_exclude_none=True)
 async def response_model(user: UserIn):
     print(user.password)
+
+
